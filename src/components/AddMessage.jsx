@@ -18,6 +18,7 @@ const AddMessage = (props) => {
                     input = node
                 }}
             />
+            <button>Send Messege</button>
         </section>
     )
 }

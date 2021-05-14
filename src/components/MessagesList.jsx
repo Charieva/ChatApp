@@ -4,9 +4,13 @@ import Message from './Message';
 
 const MessagesList = ({messages}) => {
 
-    let messageList = messages.map(message => (
-        <Message key={message.id} {...message}/>
-    ))
+    let messageList = () => {
+        if (messages) {
+            messageList = messages.map(message => {
+                return <Message key={message.id} {...message}/>
+            })       
+        }
+    }
 
     return (
         <section className='messages-list'>
